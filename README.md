@@ -1,5 +1,5 @@
-# MODELADO_ROSA-Practica1-
-Repositirio encargado de guardar los avances relacionados a la práctica encargada de desarrollar el "videojuego" de peleas. 
+# MODELADO_ROSA
+Repositirio encargado de guardar los avances relacionados a las prácticas del semestre 2026-2 
 
 Pérez Gaytán Ángel Gabriel 
 320052947
