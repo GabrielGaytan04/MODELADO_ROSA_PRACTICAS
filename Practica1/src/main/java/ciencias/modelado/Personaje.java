@@ -1,3 +1,4 @@
+
 /**
  * Clase abstracta encargada de definir el molde de un personaje.
  **/
@@ -22,6 +23,7 @@ abstract class Personaje{
 		ataque = 10;
 		defensa = 10;		
 	}
+	
 	
 	/**
 	 * SETTERS
