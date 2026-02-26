@@ -15,11 +15,21 @@ public class App{
 	 * METODO MAIN: Encargado de ejecutar el codigo 
 	 **/
 	public static void main(String[] args) {
+	
+	
+		/**
+	 	 * SALTO DE LINEA  
+		 **/
+		
+		System.out.println("\n-------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------");
 		
 		/**
 		 * REVISION PROPIEDADES DE 
 		 * KORBY 
 		 **/
+		 
 
 		/** Creacion de un objeto Korby **/
 		Korby a = new Korby(100,10,10);
@@ -53,30 +63,63 @@ public class App{
 		a.ocupaObjeto();
 		
 		/**
+	 	 * SALTO DE LINEA  
+		 **/
+		
+		System.out.println("\n-------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------");
+		
+		/**
 		 * REVISION PROPIEDADES DE 
 	  	 * MEGANMAN
 	         **/
-		//Creacion de un objeto Korby
+	         
+		//Creacion de un objeto MeganMan
                 MeganMan b = new MeganMan(70,70,70);
-                //Recuperacion datos korby 
+                //Recuperacion datos MeganMan
                 System.out.println("\n\nHola, mi nombre es:  " + b.getNombre() + "!");
                 System.out.println("Mi vida es de: " + b.getVida() + " puntos!");
                 System.out.println("Mi capacidad de ataque es de: " + b.getAtaque() + " puntos!");
                 System.out.println("Mi capacidad de defensa es de: " + b.getDefensa() + " puntos!");
-
-
-		//Edicion de stats
+                
+                //Edicion de stats
                 b.setVida(100);
                 System.out.println("Tras un pequenio ajuste mi vida es: " + b.getVida() + " puntos!");
 
-
+                
+              	/**Revision del funcionamiento del MegaBuster**/
+		System.out.println("\nAhora MeganMan procede a conseguir un objeto...");
+		b.consigueObjeto(new megaBuster());
+		b.ocupaObjeto();
+		
+		/**Revision del funcionamiento del Arma electrica**/
+		System.out.println("\nPero ahora MeganMan encuentra otra arma...");
+		b.consigueObjeto(new armaElectrica());
+		b.ocupaObjeto();
+		
+		/**Revision del funcionamiento del Escudo de Hojas**/
+		System.out.println("\nFinalmente, MeganMan necesita defenderse de algo inesperado!!!!");
+		b.consigueObjeto(new escudoHojas());
+		b.ocupaObjeto();
+		
+		
+		/**
+	 	 * SALTO DE LINEA  
+		 **/
+		
+		System.out.println("\n-------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------"+
+				    "\n--------------------------------------------------------------------");
+		
 		/**
 		 * REVISION DE PROPIEDADES 
 		 * DITTU 
 	         **/
-		 //Creacion de un objeto Korby
+	         
+		//Creacion de un objeto Dittu
                 Dittu c = new Dittu(99,99,99);
-                //Recuperacion datos korby 
+                //Recuperacion datos Dittu
                 System.out.println("\n\nHola, mi nombre es:  " + c.getNombre() + "!");
                 System.out.println("Mi vida es de: " + c.getVida() + " puntos!");
                 System.out.println("Mi capacidad de ataque es de: " + c.getAtaque() + " puntos!");
@@ -84,6 +127,25 @@ public class App{
                 //Edicion de stats
                 c.setVida(1);
                 System.out.println("Tras un pequenio ajuste mi vida es: " + c.getVida() + " puntos!");
+                
+                  
+              	/**Revision del funcionamiento del MegaBuster**/
+		System.out.println("\nAhora Dittu procede a conseguir un objeto...");
+		c.consigueObjeto(new transformacionMew());
+		c.ocupaObjeto();
+		
+		/**Revision del funcionamiento del Arma electrica**/
+		System.out.println("\nPero ahora Dittu se aburre y cambia de forma...");
+		c.consigueObjeto(new transformacionPikachu());
+		c.ocupaObjeto();
+		
+		/**Revision del funcionamiento del Escudo de Hojas**/
+		System.out.println("\nFinalmente, Dittu tiene mala suerte!");
+		c.consigueObjeto(new transformacionMagikarp());
+		c.ocupaObjeto();
+		
+                
+                
 
 
 	}

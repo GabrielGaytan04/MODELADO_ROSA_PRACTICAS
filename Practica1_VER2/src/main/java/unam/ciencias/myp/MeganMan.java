@@ -12,6 +12,11 @@ public class MeganMan extends Personaje{
          **/
 
         private String nombre = "MeganMan";
+        
+        /**
+	 * Referencia al objeto interfaz
+	 **/
+	 private objetoEspecialMeganMan objeto;
 
 
         /**
@@ -20,6 +25,24 @@ public class MeganMan extends Personaje{
         public MeganMan(int vida, int ataque, int defensa) {
                 super(vida,ataque,defensa);
         }
+        
+        /**
+	 * Metodo para conseguir objeto especial. Recibe como parametro de entrada un
+	 * objetoEspecialMeganMan. No tiene regreso. 
+	 **/
+	public void consigueObjeto(objetoEspecialMeganMan o){
+		objeto = o; 
+	}
+	/**
+	 * Metodo para ocupar el objeto recien conseguido
+	 **/
+	 public void ocupaObjeto(){
+	 	if(objeto == null){
+	 		System.out.println("MEGANMAN ESTA DESPROTEGIDO Y NO PUEDE USAR OBJETO!!! QUE DIOS SE APIADE DE EL!!!");
+	 	}
+	 	objeto.ocupa();
+	 }
+
 
         /**
          * Recuperamos el nombre del personaje 

@@ -18,7 +18,8 @@ public class Korby extends Personaje {
 	/**
 	 * Referencia al objeto interfaz
 	 **/
-	 private objetoEspecialKorby objeto;
+	
+	private objetoEspecialKorby objeto;
 
 	/**
 	 * Constructor de la clase 

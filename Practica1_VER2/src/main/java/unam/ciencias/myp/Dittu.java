@@ -12,6 +12,11 @@ public class Dittu extends Personaje{
 
         private String nombre = "Dittu";
 
+	 /**
+	 * Referencia al objeto interfaz
+	 **/
+	 private objetoEspecialDittu objeto;
+
 
         /**
          * Constructor de la clase 
@@ -19,6 +24,25 @@ public class Dittu extends Personaje{
         public Dittu(int vida, int ataque, int defensa) {
                 super(vida,ataque,defensa);
         }
+        
+        /**
+	 * Metodo para conseguir objeto especial. Recibe como parametro de entrada un
+	 * objetoEspecialMeganMan. No tiene regreso. 
+	 **/
+	public void consigueObjeto(objetoEspecialDittu o){
+		objeto = o; 
+	}
+	
+	/**
+	 * Metodo para ocupar el objeto recien conseguido
+	 **/
+	 public void ocupaObjeto(){
+	 	if(objeto == null){
+	 		System.out.println("MEGANMAN ESTA DESPROTEGIDO Y NO PUEDE USAR OBJETO!!! QUE DIOS SE APIADE DE EL!!!");
+	 	}
+	 	objeto.ocupa();
+	 }
+        
 
         /**
          * Recuperamos el nombre del personaje 
