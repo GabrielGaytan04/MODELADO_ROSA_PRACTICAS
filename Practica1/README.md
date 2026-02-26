@@ -1,3 +1,7 @@
+VERSIÓN 1 PRÁCTICA 1 
+Realmente no hubieron muchos avances, más alá de generar un esquelto de la clase personaje y unas clases de poder. El 
+problema principal fue el enfoque profundamente relacionado con un diagrama de clases poco trabajado. 
+
 INTEGRANTES
 
 Pérez Gaytán Ángel Gabriel 320052947
