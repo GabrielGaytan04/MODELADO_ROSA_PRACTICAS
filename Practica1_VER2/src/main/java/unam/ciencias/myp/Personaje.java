@@ -15,6 +15,7 @@ abstract class Personaje {
 	private int vida;
 	private int ataque;
 	private int defensa;
+	private String nombre;
 
 	/**
 	 * Constructor 
@@ -22,15 +23,14 @@ abstract class Personaje {
 	 * no lo escribio una IA aunque parezca), mas bien es nuestra manera de entender la utilidad de un 
 	 * constructor para una clase abstracta.
 	 **/
-	public Personaje(int vida, int ataque, int defensa) {
-
-		if ( (vida < 0) || (ataque < 0) || (defensa < 0) )
-			throw new IllegalArgumentException("Ninguno de los elementos de entrada puede ser vacio y/o nulo!!!!");
-
-		this.vida = vida;
-		this.ataque = ataque;
-		this.defensa = defensa;
-	}
+	public Personaje(String nombre, int vida, int ataque, int defensa) {
+        if (vida < 0 || ataque < 0 || defensa < 0)
+            throw new IllegalArgumentException("Ninguno de los elementos puede ser negativo.");
+        this.nombre = nombre;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defensa = defensa;
+    }
 
 	/**
 	 * Metodos de edicion de elementos 
@@ -80,6 +80,9 @@ abstract class Personaje {
 	}
 	public int getDefensa() {
 		return defensa;
+	}
+	public String getNombre() { 
+		return nombre; 
 	}
 	
 }

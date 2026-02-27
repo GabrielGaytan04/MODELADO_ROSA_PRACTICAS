@@ -3,7 +3,7 @@
  * Los poderes asociados al personaje impkementaran esta interfaz.  
  **/
  
-public interface objetoEspecialKorby{
+public interface ObjetoEspecialKorby{
 	/**
 	 * El metodo encargado de ser implementado por sus clases hijas sera 
 	 * la generacion del objeto. 

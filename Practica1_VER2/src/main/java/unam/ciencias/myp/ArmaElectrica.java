@@ -1,8 +1,8 @@
 /**
- * Segundo poder permitido de Dittu  
- * Implementa la interfaz objetoEspecialDittu. 
+ * Primer poder permitido de MeganMan
+ * Implementa la interfaz objetoEspecialMeganMan. 
  **/
-public class transformacionPikachu implements objetoEspecialDittu{
+public class ArmaElectrica implements ObjetoEspecialMeganMan {
 
                 /**
                  * Atributos de clase que espero poder relacionar en las 
@@ -10,15 +10,15 @@ public class transformacionPikachu implements objetoEspecialDittu{
                  **/
 
                 /** Ataque **/ 
-                private int a = 50;
+                private int a = 100;
                 /** Defensa **/ 
-                private int d = 25;
+                private int d = 20;
 
                 /**
                  * Escritura del metodo proveniente de la interfaz
                  **/
                 public void ocupa(){
-                        System.out.println("Ahora Dittu es el personaje mas rentable de la franquicia!!! PIKA PIKA ");
+                        System.out.println("Ahora MeganMan dispara un rayo electrico!");
                 }
 
                 /**
@@ -31,6 +31,8 @@ public class transformacionPikachu implements objetoEspecialDittu{
                         return d;
                  }
 }
+
+
 
 
 

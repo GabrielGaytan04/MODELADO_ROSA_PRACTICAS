@@ -5,7 +5,7 @@
 
 
 public class MeganMan extends Personaje{
-	 
+	
         /** Atributos de clase 
          * Para diferenciar un poco mas al personaje de la super clase, 
          * agregamos un atributo nombre que sera fijo y no cambiara
@@ -16,21 +16,21 @@ public class MeganMan extends Personaje{
         /**
 	 * Referencia al objeto interfaz
 	 **/
-	 private objetoEspecialMeganMan objeto;
+	 private ObjetoEspecialMeganMan objeto;
 
 
         /**
          * Constructor de la clase 
          **/
         public MeganMan(int vida, int ataque, int defensa) {
-                super(vida,ataque,defensa);
+                super("MeganMan", vida, ataque, defensa);
         }
         
         /**
 	 * Metodo para conseguir objeto especial. Recibe como parametro de entrada un
 	 * objetoEspecialMeganMan. No tiene regreso. 
 	 **/
-	public void consigueObjeto(objetoEspecialMeganMan o){
+	public void consigueObjeto(ObjetoEspecialMeganMan o){
 		objeto = o; 
 	}
 	/**

@@ -1,8 +1,8 @@
 /**
- * Segundo poder permitido de MeganMan
+ * Tercer poder permitido de MeganMan
  * Implementa la interfaz objetoEspecialMeganMan. 
  **/
-public class escudoHojas implements objetoEspecialMeganMan{
+public class MegaBuster implements ObjetoEspecialMeganMan{
 
                 /**
                  * Atributos de clase que espero poder relacionar en las 
@@ -10,15 +10,15 @@ public class escudoHojas implements objetoEspecialMeganMan{
                  **/
 
                 /** Ataque **/ 
-                private int a = 15;
+                private int a = 50;
                 /** Defensa **/ 
-                private int d = 100;
+                private int d = 50;
 
                 /**
                  * Escritura del metodo proveniente de la interfaz
                  **/
                 public void ocupa(){
-                        System.out.println("Ahora el escudo proteje a Meganman de un ataque enemigo!");
+                        System.out.println("MeganMan ahora puede realizar disparos mas peligrosos!");
                 }
 
                 /**
@@ -31,8 +31,5 @@ public class escudoHojas implements objetoEspecialMeganMan{
                         return d;
                  }
 }
-
-
-
 
 

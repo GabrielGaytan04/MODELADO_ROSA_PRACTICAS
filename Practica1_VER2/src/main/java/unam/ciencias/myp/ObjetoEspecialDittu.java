@@ -3,7 +3,7 @@
  * Solo los poderes de su saga se encargaran de implementarlo 
  ***/
  
-public interface objetoEspecialDittu{
+public interface ObjetoEspecialDittu{
         /**
          * El metodo encargado de ser implementado por sus clases hijas sera 
          * la generacion del objeto. 

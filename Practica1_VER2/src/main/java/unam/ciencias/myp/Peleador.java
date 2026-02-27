@@ -2,7 +2,7 @@
  * Segundo poder permitido de Korby 
  * Implementa la interfaz objetoEspecialKorby. 
  **/
-public class Peleador implements objetoEspecialKorby{
+public class Peleador implements ObjetoEspecialKorby{
 
 		/**
 		 * Atributos de clase que espero poder relacionar en las 

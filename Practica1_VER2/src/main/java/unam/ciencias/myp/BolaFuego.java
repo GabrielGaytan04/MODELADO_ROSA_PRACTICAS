@@ -2,7 +2,7 @@
  * Segundo poder permitido de Korby 
  * Implementa la interfaz objetoEspecialKorby. 
  **/
-public class bolaFuego implements objetoEspecialKorby{
+public class BolaFuego implements ObjetoEspecialKorby{
 
 		/**
 		 * Atributos de clase que espero poder relacionar en las 

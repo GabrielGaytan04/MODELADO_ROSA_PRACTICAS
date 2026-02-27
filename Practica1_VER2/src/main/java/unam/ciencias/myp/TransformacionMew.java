@@ -1,8 +1,8 @@
 /**
- * Primer poder permitido de MeganMan
- * Implementa la interfaz objetoEspecialMeganMan. 
+ * Primer poder permitido de Dittu  
+ * Implementa la interfaz objetoEspecialDittu. 
  **/
-public class armaElectrica implements objetoEspecialMeganMan{
+public class TransformacionMew implements ObjetoEspecialDittu{
 
                 /**
                  * Atributos de clase que espero poder relacionar en las 
@@ -12,13 +12,13 @@ public class armaElectrica implements objetoEspecialMeganMan{
                 /** Ataque **/ 
                 private int a = 100;
                 /** Defensa **/ 
-                private int d = 20;
+                private int d = 100;
 
                 /**
                  * Escritura del metodo proveniente de la interfaz
                  **/
                 public void ocupa(){
-                        System.out.println("Ahora MeganMan dispara un rayo electrico!");
+                        System.out.println("Ahora Dittu es un chinpokomon legendario!!!! OSTIA MANOLO");
                 }
 
                 /**
@@ -31,8 +31,6 @@ public class armaElectrica implements objetoEspecialMeganMan{
                         return d;
                  }
 }
-
-
 
 
 

@@ -1,8 +1,8 @@
 /**
- * Segundo poder permitido de Dittu  
- * Implementa la interfaz objetoEspecialDittu. 
+ * Segundo poder permitido de MeganMan
+ * Implementa la interfaz objetoEspecialMeganMan. 
  **/
-public class transformacionMagikarp implements objetoEspecialDittu{
+public class EscudoHojas implements ObjetoEspecialMeganMan{
 
                 /**
                  * Atributos de clase que espero poder relacionar en las 
@@ -10,15 +10,15 @@ public class transformacionMagikarp implements objetoEspecialDittu{
                  **/
 
                 /** Ataque **/ 
-                private int a = 0;
+                private int a = 15;
                 /** Defensa **/ 
-                private int d = 0;
+                private int d = 100;
 
                 /**
                  * Escritura del metodo proveniente de la interfaz
                  **/
                 public void ocupa(){
-                        System.out.println("Ahora Dittu es el chinpokomon mas patetico y parodiado. LASTIMA MARGARITO ");
+                        System.out.println("Ahora el escudo proteje a Meganman de un ataque enemigo!");
                 }
 
                 /**
@@ -31,6 +31,7 @@ public class transformacionMagikarp implements objetoEspecialDittu{
                         return d;
                  }
 }
+
 
 
 

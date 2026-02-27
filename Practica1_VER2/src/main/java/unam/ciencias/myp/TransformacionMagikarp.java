@@ -1,8 +1,8 @@
 /**
- * Primer poder permitido de Dittu  
+ * Segundo poder permitido de Dittu  
  * Implementa la interfaz objetoEspecialDittu. 
  **/
-public class transformacionMew implements objetoEspecialDittu{
+public class TransformacionMagikarp implements ObjetoEspecialDittu{
 
                 /**
                  * Atributos de clase que espero poder relacionar en las 
@@ -10,15 +10,15 @@ public class transformacionMew implements objetoEspecialDittu{
                  **/
 
                 /** Ataque **/ 
-                private int a = 100;
+                private int a = 0;
                 /** Defensa **/ 
-                private int d = 100;
+                private int d = 0;
 
                 /**
                  * Escritura del metodo proveniente de la interfaz
                  **/
                 public void ocupa(){
-                        System.out.println("Ahora Dittu es un chinpokomon legendario!!!! OSTIA MANOLO");
+                        System.out.println("Ahora Dittu es el chinpokomon mas patetico y parodiado. LASTIMA MARGARITO ");
                 }
 
                 /**

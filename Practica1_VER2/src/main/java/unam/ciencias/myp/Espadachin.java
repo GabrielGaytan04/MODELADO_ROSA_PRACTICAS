@@ -2,7 +2,7 @@
  * Primer poder permitido de Korby 
  * Implementa la interfaz objetoEspecialKorby. 
  **/
-public class Espadachin implements objetoEspecialKorby{
+public class Espadachin implements ObjetoEspecialKorby{
 
 		/**
 		 * Atributos de clase que espero poder relacionar en las 

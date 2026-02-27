@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Clase encargada de ejecutar el codigo del programa
  * En este momento el programa solo puede hacer un par de propiedades basicas de los personajes.  
@@ -15,138 +17,99 @@ public class App{
 	 * METODO MAIN: Encargado de ejecutar el codigo 
 	 **/
 	public static void main(String[] args) {
-	
-	
+
 		/**
 	 	 * SALTO DE LINEA  
 		 **/
-		
 		System.out.println("\n-------------------------------------------------------------------"+
 				    "\n--------------------------------------------------------------------"+
 				    "\n--------------------------------------------------------------------");
 		
-		/**
-		 * REVISION PROPIEDADES DE 
-		 * KORBY 
-		 **/
-		 
+		// 1. Configurar Sujeto (Combate) y Observadores (4 Espectadores)
+        Combate arena = new Combate();
+        Espectador e1 = new Espectador("espectador123", "Korby", arena);
+        Espectador e2 = new Espectador("fanBoy_99", "MeganMan", arena);
+        Espectador e3 = new Espectador("master_poke", "Dittu", arena);
+        Espectador e4 = new Espectador("invitado001", "Korby", arena);
 
-		/** Creacion de un objeto Korby **/
-		Korby a = new Korby(100,10,10);
-		
-		/** Recuperacion datos basicos korby **/
-		System.out.println("Hola, mi nombre es:  " + a.getNombre() + "!");
-		System.out.println("Mi vida es de: " + a.getVida() + " puntos!");
-		System.out.println("Mi capacidad de ataque es de: " + a.getAtaque() + " puntos!");
-		System.out.println("Mi capacidad de defensa es de: " + a.getDefensa() + " puntos!");
-		
-		/** Edicion de stats **/
-		a.setVida(10);
-		System.out.println("Tras un pequenio ajuste mi vida es: " + a.getVida() + " puntos!");
-		
-		/** Revision de un objeto korby sin objeto y quiera usarlo**/
-		//a.ocupaObjeto();//Arroja una null pointer exception y ua no ejecuta el resto del codigo.
-		
-		/**Revision del funcionamiento de la espada**/
-		System.out.println("\nAhora korby procede a conseguir un objeto...");
-		a.consigueObjeto(new Espadachin());
-		a.ocupaObjeto();
-		
-		/**Revision del funcionamiento del peleador**/
-		System.out.println("\nPero ahora Korby se transforma en otra cosa...");
-		a.consigueObjeto(new Peleador());
-		a.ocupaObjeto();
-		
-		/**Revision del funcionamiento de la bola de fuego**/
-		System.out.println("\nFinalmente, Korby consume algo inesperado!!!!");
-		a.consigueObjeto(new bolaFuego());
-		a.ocupaObjeto();
-		
-		/**
-	 	 * SALTO DE LINEA  
-		 **/
-		
-		System.out.println("\n-------------------------------------------------------------------"+
-				    "\n--------------------------------------------------------------------"+
-				    "\n--------------------------------------------------------------------");
-		
-		/**
-		 * REVISION PROPIEDADES DE 
-	  	 * MEGANMAN
-	         **/
-	         
-		//Creacion de un objeto MeganMan
-                MeganMan b = new MeganMan(70,70,70);
-                //Recuperacion datos MeganMan
-                System.out.println("\n\nHola, mi nombre es:  " + b.getNombre() + "!");
-                System.out.println("Mi vida es de: " + b.getVida() + " puntos!");
-                System.out.println("Mi capacidad de ataque es de: " + b.getAtaque() + " puntos!");
-                System.out.println("Mi capacidad de defensa es de: " + b.getDefensa() + " puntos!");
-                
-                //Edicion de stats
-                b.setVida(100);
-                System.out.println("Tras un pequenio ajuste mi vida es: " + b.getVida() + " puntos!");
+		// 2. Configurar Personajes (Contextos)
+        Korby korby = new Korby(100, 10, 10);
+        MeganMan megan = new MeganMan(100, 10, 10);
+        Dittu dittu = new Dittu(100, 10, 10);
 
-                
-              	/**Revision del funcionamiento del MegaBuster**/
-		System.out.println("\nAhora MeganMan procede a conseguir un objeto...");
-		b.consigueObjeto(new megaBuster());
-		b.ocupaObjeto();
-		
-		/**Revision del funcionamiento del Arma electrica**/
-		System.out.println("\nPero ahora MeganMan encuentra otra arma...");
-		b.consigueObjeto(new armaElectrica());
-		b.ocupaObjeto();
-		
-		/**Revision del funcionamiento del Escudo de Hojas**/
-		System.out.println("\nFinalmente, MeganMan necesita defenderse de algo inesperado!!!!");
-		b.consigueObjeto(new escudoHojas());
-		b.ocupaObjeto();
-		
-		
-		/**
-	 	 * SALTO DE LINEA  
-		 **/
-		
-		System.out.println("\n-------------------------------------------------------------------"+
-				    "\n--------------------------------------------------------------------"+
-				    "\n--------------------------------------------------------------------");
-		
-		/**
-		 * REVISION DE PROPIEDADES 
-		 * DITTU 
-	         **/
-	         
-		//Creacion de un objeto Dittu
-                Dittu c = new Dittu(99,99,99);
-                //Recuperacion datos Dittu
-                System.out.println("\n\nHola, mi nombre es:  " + c.getNombre() + "!");
-                System.out.println("Mi vida es de: " + c.getVida() + " puntos!");
-                System.out.println("Mi capacidad de ataque es de: " + c.getAtaque() + " puntos!");
-                System.out.println("Mi capacidad de defensa es de: " + c.getDefensa() + " puntos!");
-                //Edicion de stats
-                c.setVida(1);
-                System.out.println("Tras un pequenio ajuste mi vida es: " + c.getVida() + " puntos!");
-                
-                  
-              	/**Revision del funcionamiento del MegaBuster**/
-		System.out.println("\nAhora Dittu procede a conseguir un objeto...");
-		c.consigueObjeto(new transformacionMew());
-		c.ocupaObjeto();
-		
-		/**Revision del funcionamiento del Arma electrica**/
-		System.out.println("\nPero ahora Dittu se aburre y cambia de forma...");
-		c.consigueObjeto(new transformacionPikachu());
-		c.ocupaObjeto();
-		
-		/**Revision del funcionamiento del Escudo de Hojas**/
-		System.out.println("\nFinalmente, Dittu tiene mala suerte!");
-		c.consigueObjeto(new transformacionMagikarp());
-		c.ocupaObjeto();
-		
-                
-                
+		// 3. Seleccionar Caso de Prueba al Azar
+        Random rand = new Random();
+        int caso = rand.nextInt(3) + 1;
+        arena.setEstado("+++ CARGANDO CASO DE PRUEBA #" + caso + " +++");
 
+		String ganador = "";
 
-	}
+		// 4. Lógica de los 3 combates
+        if (caso == 1) {
+            arena.setEstado("Korby obtiene una espada.");
+            korby.consigueObjeto(new Espadachin()); korby.ocupaObjeto();
+            arena.setEstado("MeganMan obtiene un Buster.");
+            megan.consigueObjeto(new MegaBuster()); megan.ocupaObjeto();
+            arena.setEstado("Dittu se transforma en Mew.");
+            dittu.consigueObjeto(new TransformacionMew()); dittu.ocupaObjeto();
+
+            arena.procesarAtaque(dittu, megan);
+            arena.procesarAtaque(korby, megan);
+            arena.setEstado("MeganMan ha sido derrotado.");
+            megan.setVida(0);
+
+            arena.procesarAtaque(dittu, korby);
+            arena.setEstado("Korby ha sido derrotado.");
+            korby.setVida(0);
+            
+            ganador = dittu.getNombre();
+
+        } else if (caso == 2) {
+            arena.setEstado("Korby se vuelve un peleador.");
+            korby.consigueObjeto(new Peleador()); korby.ocupaObjeto();
+            arena.setEstado("MeganMan saca el Escudo de Hojas.");
+            megan.consigueObjeto(new EscudoHojas()); megan.ocupaObjeto();
+            arena.setEstado("Dittu se transforma en Magikarp por error.");
+            dittu.consigueObjeto(new TransformacionMagikarp()); dittu.ocupaObjeto();
+
+            arena.procesarAtaque(korby, dittu);
+            arena.setEstado("Dittu fue derrotado fácilmente.");
+            dittu.setVida(0);
+
+            arena.procesarAtaque(korby, megan);
+            arena.procesarAtaque(korby, megan);
+            arena.setEstado("La defensa de MeganMan cedió y fue derrotado.");
+            megan.setVida(0);
+
+            ganador = korby.getNombre();
+
+        } else {
+            arena.setEstado("Korby lanza Bolas de Fuego.");
+            korby.consigueObjeto(new BolaFuego()); korby.ocupaObjeto();
+            arena.setEstado("MeganMan carga el Arma Eléctrica.");
+            megan.consigueObjeto(new ArmaElectrica()); megan.ocupaObjeto();
+            arena.setEstado("Dittu es un Pikachu.");
+            dittu.consigueObjeto(new TransformacionPikachu()); dittu.ocupaObjeto();
+
+            arena.procesarAtaque(megan, korby);
+            arena.setEstado("Korby ha sido paralizado y derrotado.");
+            korby.setVida(0);
+
+            arena.procesarAtaque(megan, dittu);
+            arena.setEstado("Dittu no resistió el alto voltaje.");
+            dittu.setVida(0);
+
+            ganador = megan.getNombre();
+        }
+
+        // 5. Finalizar y generar archivos
+        arena.setEstado("\n¡EL COMBATE HA TERMINADO! El ganador es: " + ganador);
+        e1.generarArchivo(ganador);
+        e2.generarArchivo(ganador);
+        e3.generarArchivo(ganador);
+        e4.generarArchivo(ganador);
+        
+        System.out.println("\nBitácoras de los espectadores generadas exitosamente en la carpeta del proyecto.");
+    }
+
 }
